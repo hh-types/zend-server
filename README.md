@@ -11,7 +11,7 @@ Currently supported versions:
 
 Require the bundle into your _composer.json_ file:
 ```
-composer require hhi-types/zend-server-hhi
+composer require hh-types/zend-server-hhi
 ```
 
 ### TODO
