@@ -5,16 +5,15 @@ namespace Zend\Server;
 interface Server
 {
     public function addFunction(
-        string $function,
-        string $namespace = '',
-        mixed ...$args
+        mixed $function,
+        string $namespace = ''
     ): void;
     public function setClass(
         dynamic $class,
         string $namespace = '',
-        mixed $argv = null
+        mixed ...$argv
     ): void;
-    public function fault(mixed $fault = null, int $code = 404): mixed;
+    public function fault(mixed $fault = null, arraykey $code = 404): dynamic;
     public function handle(mixed $request = false): mixed;
     public function getFunctions(): Traversable;
     public function loadFunctions(array $definition): void;
