@@ -16,4 +16,5 @@ composer require hh-types/zend-server-hhi
 
 ### TODO
 
+- CI.
 - Tests.
