@@ -1,0 +1,26 @@
+{
+    "name": "hh-types/zend-server-hhi",
+    "keywords": [
+        "hack",
+        "hhi",
+        "hhi-types",
+        "hhvm",
+        "types",
+        "zend",
+        "server",
+        "zend-server"
+    ],
+    "authors": [
+        {
+            "name": "Elvis Munoz F.",
+            "email": "elvis.munoz.f@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "hhvm": "^3.25"
+    },
+    "require-dev": {
+        "zendframework/zend-server": "^2.8"
+    }
+}
