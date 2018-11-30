@@ -2,15 +2,14 @@
 
 namespace Zend\Server\Reflection;
 
-class Prototype
-{
+class Prototype {
     // Attributes.
     protected array<\Zend\Server\Reflection\ReflectionParameter> $params;
 
     // Methods.
     public function __construct(
         \Zend\Server\Reflection\ReflectionReturnValue $return,
-        array<\Zend\Server\Reflection\ReflectionParameter> $params = []
+        array<\Zend\Server\Reflection\ReflectionParameter> $params = [],
     );
     public function getReturnType(): ?string;
     public function getReturnValue(

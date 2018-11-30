@@ -7,19 +7,18 @@ use Zend\Server;
 /**
  * Method definition metadata
  */
-class Definition
-{
+class Definition<T> {
     // Attributes.
     protected \Zend\Server\Method\Callback $callback;
-    protected array<dynamic> $invokeArguments = [];
+    protected array<mixed> $invokeArguments = [];
     protected string $methodHelp = '';
     protected string $name;
-    protected dynamic $object;
+    protected T $object;
     protected array<\Zend\Server\Method\Prototype> $prototypes = [];
 
     // Methods.
-    public function __construct(?array<arraykey, dynamic> $options = null);
-    public function setOptions(array<arraykey, dynamic> $options): this;
+    public function __construct(?array<arraykey, mixed> $options = null);
+    public function setOptions(array<arraykey, mixed> $options): this;
     public function setName(string $name): this;
     public function getName(): string;
     public function setCallback(mixed $callback): this;
@@ -30,9 +29,9 @@ class Definition
     public function getPrototypes(): array<Prototype>;
     public function setMethodHelp(string $methodHelp): this;
     public function getMethodHelp(): string;
-    public function setObject(dynamic $object): this;
-    public function getObject(): dynamic;
-    public function setInvokeArguments(array<dynamic> $invokeArguments): this;
-    public function getInvokeArguments(): array<dynamic>;
-    public function toArray(): array<arraykey, dynamic>;
+    public function setObject(T $object): this;
+    public function getObject(): T;
+    public function setInvokeArguments(array<mixed> $invokeArguments): this;
+    public function getInvokeArguments(): array<mixed>;
+    public function toArray(): array<arraykey, mixed>;
 }

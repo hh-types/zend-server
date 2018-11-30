@@ -2,8 +2,7 @@
 
 namespace Zend\Server\Reflection;
 
-class Node
-{
+class Node {
     // Attributes.
     protected mixed $value = null;
     protected array<Node> $children = [];

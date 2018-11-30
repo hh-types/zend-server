@@ -2,7 +2,6 @@
 
 namespace Zend\Server;
 
-interface Client
-{
+interface Client {
     public function call(string $method, array $params = []);
 }

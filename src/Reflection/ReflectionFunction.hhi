@@ -2,7 +2,6 @@
 
 namespace Zend\Server\Reflection;
 
-class ReflectionFunction extends AbstractFunction
-{
+class ReflectionFunction<T> extends AbstractFunction<T> {
 
 }

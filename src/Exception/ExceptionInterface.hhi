@@ -2,7 +2,6 @@
 
 namespace Zend\Server\Exception;
 
-interface ExceptionInterface
-{
+interface ExceptionInterface {
 
 }

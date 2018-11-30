@@ -2,13 +2,12 @@
 
 namespace Zend\Server\Reflection;
 
-class ReflectionMethod extends AbstractFunction
-{
+class ReflectionMethod<T> extends AbstractFunction<T> {
     // Constants.
     const string INHERIT_TAG = '{@inheritdoc}';
 
     // Attributes.
-    protected string $class;
+    protected T $class;
     protected ReflectionClass $classReflection;
 
     // Methods.
@@ -16,7 +15,7 @@ class ReflectionMethod extends AbstractFunction
         ReflectionClass $class,
         \ReflectionMethod $r,
         ?string $namespace = null,
-        mixed $argv = []
+        mixed $argv = [],
     );
     public function getDeclaringClass(): ReflectionClass;
     public function __wakeup(): void;
@@ -24,7 +23,7 @@ class ReflectionMethod extends AbstractFunction
     private function fetchRecursiveDocComment(): string;
     private function fetchRecursiveDocBlockFromParent(
         \ReflectionClass $reflectionClass,
-        string $methodName
+        string $methodName,
     ): mixed;
     private function isInherit(string $docComment): bool;
 }

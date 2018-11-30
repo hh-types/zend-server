@@ -2,8 +2,7 @@
 
 namespace Zend\Server\Reflection;
 
-class ReflectionReturnValue
-{
+class ReflectionReturnValue {
     // Attributes.
     protected string $type;
     protected string $description;
@@ -11,7 +10,7 @@ class ReflectionReturnValue
     // Methods.
     public function __construct(
         string $type = 'mixed',
-        string $description = ''
+        string $description = '',
     );
     public function getType(): ?string;
     public function setType(?string $type): void;

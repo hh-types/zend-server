@@ -2,8 +2,7 @@
 
 namespace Zend\Server\Reflection;
 
-class ReflectionParameter
-{
+class ReflectionParameter {
     // Attributes.
     protected \ReflectionParameter $reflection;
     protected int $position;
@@ -14,7 +13,7 @@ class ReflectionParameter
     public function __construct(
         \ReflectionParameter $r,
         string $type = 'mixed',
-        string $description = ''
+        string $description = '',
     );
     public function __call(string $method, mixed ...$args);
     public function getType(): string;

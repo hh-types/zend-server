@@ -2,7 +2,6 @@
 
 namespace Zend\Server\Reflection\Exception;
 
-interface ExceptionInterface extends \Zend\Server\Exception\ExceptionInterface
-{
+interface ExceptionInterface extends \Zend\Server\Exception\ExceptionInterface {
 
 }

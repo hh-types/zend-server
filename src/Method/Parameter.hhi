@@ -2,8 +2,7 @@
 
 namespace Zend\Server\Method;
 
-class Parameter
-{
+class Parameter {
     // Attributes.
     protected mixed $defaultValue;
     protected string $description = '';
@@ -12,8 +11,8 @@ class Parameter
     protected string $type = 'mixed';
 
     // Methods.
-    public function __construct(?array<arraykey, dynamic> $options = null);
-    public function setOptions(array<arraykey, dynamic> $options): this;
+    public function __construct(?array<arraykey, mixed> $options = null);
+    public function setOptions(array<arraykey, mixed> $options): this;
     public function setDefaultValue(mixed $defaultValue): this;
     public function getDefaultValue(): mixed;
     public function setDescription(string $description): this;
@@ -24,5 +23,5 @@ class Parameter
     public function isOptional(): bool;
     public function setType(string $type): this;
     public function getType(): string;
-    public function toArray(): array<arraykey, dynamic>;
+    public function toArray(): array<arraykey, mixed>;
 }

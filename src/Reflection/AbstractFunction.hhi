@@ -2,13 +2,12 @@
 
 namespace Zend\Server\Reflection;
 
-abstract class AbstractFunction
-{
+abstract class AbstractFunction<T> {
     // Attributes.
     protected \ReflectionFunctionAbstract $reflection;
     protected array<mixed> $argv = [];
-    protected array<arraykey, dynamic> $config = [];
-    protected string $class;
+    protected array<arraykey, mixed> $config = [];
+    protected T $class;
     protected string $description = '';
     protected string $namespace;
     protected array<\Zend\Server\Reflection\Prototype> $prototypes = [];
@@ -23,7 +22,7 @@ abstract class AbstractFunction
     public function __construct(
         \ReflectionFunctionAbstract $r,
         ?string $namespace = null,
-        array<mixed> $argv = []
+        array<mixed> $argv = [],
     );
     protected function addTree(Node $parent, int $level = 0): void;
     protected function buildTree(): array<Node>;
@@ -31,7 +30,7 @@ abstract class AbstractFunction
         array<ReflectionReturnValue> $return,
         string $returnDesc,
         array<string> $paramTypes,
-        array<string> $paramDesc
+        array<string> $paramDesc,
     ): void;
     protected function reflect(): void;
     public function __call(string $method, array $args);
