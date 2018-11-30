@@ -5,9 +5,9 @@
         "hhi",
         "hhi-types",
         "hhvm",
+        "server",
         "types",
         "zend",
-        "server",
         "zend-server"
     ],
     "authors": [
@@ -18,7 +18,7 @@
     ],
     "license": "MIT",
     "require": {
-        "hhvm": "^3.25"
+        "hhvm": "^3.29"
     },
     "require-dev": {
         "zendframework/zend-server": "^2.8"
